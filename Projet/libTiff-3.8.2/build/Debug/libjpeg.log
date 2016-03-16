@@ -1,0 +1,119 @@
+﻿Build started 01/10/2015 10:44:10.
+     1>Project "C:\dev\ENSG_VS13\libjpeg\libjpeg.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\libjpeg /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _DLL /D _VC80_UPGRADE=0x0710 /D _WINDLL /D _MBCS /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/" /Fd"C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/libjpeg.pdb" /Gd /TC /analyze- /errorReport:prompt jcapimin.c jcapistd.c jccoefct.c jccolor.c jcdctmgr.c jchuff.c jcinit.c jcmainct.c jcmarker.c jcmaster.c jcomapi.c jcparam.c jcphuff.c jcprepct.c jcsample.c jctrans.c jdapimin.c jdapistd.c jdatadst.c jdatasrc.c jdcoefct.c jdcolor.c jddctmgr.c jdhuff.c jdinput.c jdmainct.c jdmarker.c jdmaster.c jdmerge.c jdphuff.c jdpostct.c jdsample.c jdtrans.c jerror.c jfdctflt.c jfdctfst.c jfdctint.c jidctflt.c jidctfst.c jidctint.c jidctred.c jmemmgr.c jmemnobs.c jquant1.c jquant2.c jutils.c
+         jcapimin.c
+         jcapistd.c
+         jccoefct.c
+         jccolor.c
+         jcdctmgr.c
+         jchuff.c
+         jcinit.c
+         jcmainct.c
+         jcmarker.c
+         jcmaster.c
+         jcomapi.c
+         jcparam.c
+         jcphuff.c
+         jcprepct.c
+         jcsample.c
+         jctrans.c
+         jdapimin.c
+         jdapistd.c
+         jdatadst.c
+         jdatasrc.c
+         Generating Code...
+         Compiling...
+         jdcoefct.c
+         jdcolor.c
+         jddctmgr.c
+         jdhuff.c
+         jdinput.c
+         jdmainct.c
+         jdmarker.c
+         jdmaster.c
+         jdmerge.c
+         jdphuff.c
+         jdpostct.c
+         jdsample.c
+         jdtrans.c
+         jerror.c
+     1>jerror.c(193): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>jerror.c(199): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+         jfdctflt.c
+         jfdctfst.c
+         jfdctint.c
+         jidctflt.c
+         jidctfst.c
+         jidctint.c
+         Generating Code...
+         Compiling...
+         jidctred.c
+         jmemmgr.c
+     1>jmemmgr.c(1106): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(462) : see declaration of 'getenv'
+     1>jmemmgr.c(1109): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+         jmemnobs.c
+         jquant1.c
+         jquant2.c
+         jutils.c
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1193,5): warning MSB8012: TargetPath(C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\libjpeg.dll) does not match the Linker's OutputFile property value (C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\libjpegd.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1195,5): warning MSB8012: TargetName(libjpeg) does not match the Linker's OutputFile property value (libjpegd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\libjpegd.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\libjpeg.pdb" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\libjpegd.lib" /MACHINE:X86 /SAFESEH /DLL "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jcapimin.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jcapistd.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jccoefct.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jccolor.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jcdctmgr.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jchuff.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jcinit.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jcmainct.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jcmarker.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jcmaster.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jcomapi.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jcparam.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jcphuff.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jcprepct.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jcsample.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jctrans.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdapimin.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdapistd.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdatadst.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdatasrc.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdcoefct.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdcolor.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jddctmgr.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdhuff.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdinput.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdmainct.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdmarker.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdmaster.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdmerge.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdphuff.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdpostct.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdsample.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jdtrans.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jerror.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jfdctflt.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jfdctfst.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jfdctint.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jidctflt.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jidctfst.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jidctint.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jidctred.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jmemmgr.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jmemnobs.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jquant1.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jquant2.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/jutils.obj"
+            Creating library C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\libjpegd.lib and object C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\libjpegd.exp
+         libjpeg.vcxproj -> C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\libjpeg.dll
+     1>Done Building Project "C:\dev\ENSG_VS13\libjpeg\libjpeg.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.34

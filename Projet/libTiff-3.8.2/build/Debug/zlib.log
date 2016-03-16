@@ -1,0 +1,56 @@
+﻿Build started 01/10/2015 10:44:10.
+     1>Project "C:\dev\ENSG_VS13\zlib\zlib.vcxproj" on node 3 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug\) contains files shared from another project (libjpeg.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D ZLIB_DLL /D _VC80_UPGRADE=0x0710 /D _WINDLL /D _MBCS /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/" /Fd"C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/zlibd.pdb" /Gd /TC /analyze- /errorReport:prompt adler32.c compress.c crc32.c deflate.c gzio.c infback.c inffast.c inflate.c inftrees.c trees.c uncompr.c zutil.c
+         adler32.c
+         compress.c
+         crc32.c
+         deflate.c
+         gzio.c
+     1>gzio.c(131): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(112) : see declaration of 'strcpy'
+     1>gzio.c(181): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>gzio.c(226): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>gzio.c(627): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(346) : see declaration of '_vsnprintf'
+     1>gzio.c(1001): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(168) : see declaration of 'strerror'
+     1>gzio.c(1008): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(112) : see declaration of 'strcpy'
+     1>gzio.c(1009): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(118) : see declaration of 'strcat'
+     1>gzio.c(1010): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(118) : see declaration of 'strcat'
+         infback.c
+         inffast.c
+         inflate.c
+         inftrees.c
+         trees.c
+         uncompr.c
+         zutil.c
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1193,5): warning MSB8012: TargetPath(C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\zlib.dll) does not match the Linker's OutputFile property value (C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\zlibd.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1195,5): warning MSB8012: TargetName(zlib) does not match the Linker's OutputFile property value (zlibd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\zlibd.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\zlib.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\zlibd.lib" /MACHINE:X86 /SAFESEH /DLL "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/adler32.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/compress.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/crc32.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/deflate.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/gzio.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/infback.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/inffast.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/inflate.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/inftrees.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/trees.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/uncompr.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Debug/zutil.obj"
+            Creating library C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\zlibd.lib and object C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\zlibd.exp
+         zlib.vcxproj -> C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\zlib.dll
+     1>Done Building Project "C:\dev\ENSG_VS13\zlib\zlib.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.15

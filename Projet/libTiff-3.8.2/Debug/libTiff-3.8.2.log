@@ -1,0 +1,172 @@
+﻿Build started 01/10/2015 10:44:13.
+     1>Project "C:\dev\ENSG_VS13\libTiff-3.8.2\libTiff-3.8.2.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\libjpeg /I..\zlib /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LIBTIFF382_EXPORTS /D __WIN32__ /D TIF_PLATFORM_CONSOLE /D BUILD_LIBTIFF_DLL /D _VC80_UPGRADE=0x0710 /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt libtiff\tif_aux.c libtiff\tif_close.c libtiff\tif_codec.c libtiff\tif_color.c libtiff\tif_compress.c libtiff\tif_dir.c libtiff\tif_dirinfo.c libtiff\tif_dirread.c libtiff\tif_dirwrite.c libtiff\tif_dumpmode.c libtiff\tif_error.c libtiff\tif_extension.c libtiff\tif_fax3.c libtiff\tif_fax3sm.c libtiff\tif_flush.c libtiff\tif_getimage.c libtiff\tif_jpeg.c libtiff\tif_luv.c libtiff\tif_lzw.c libtiff\tif_next.c libtiff\tif_ojpeg.c libtiff\tif_open.c libtiff\tif_packbits.c libtiff\tif_pixarlog.c libtiff\tif_predict.c libtiff\tif_print.c libtiff\tif_read.c libtiff\tif_strip.c libtiff\tif_swab.c libtiff\tif_thunder.c libtiff\tif_tile.c libtiff\tif_version.c libtiff\tif_warning.c libtiff\tif_win32.c libtiff\tif_write.c libtiff\tif_zip.c
+         tif_zip.c
+         tif_write.c
+         tif_win32.c
+         tif_warning.c
+         tif_version.c
+         tif_tile.c
+         tif_thunder.c
+         tif_swab.c
+         tif_strip.c
+         tif_read.c
+         tif_print.c
+         tif_predict.c
+         tif_pixarlog.c
+         tif_packbits.c
+         tif_open.c
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_open.c(168): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+         tif_ojpeg.c
+         tif_next.c
+         tif_lzw.c
+         tif_luv.c
+         tif_jpeg.c
+         Generating Code...
+         Compiling...
+         tif_getimage.c
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(80): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(89): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(102): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(118): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(130): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(137): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(148): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(154): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(162): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(170): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(175): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(183): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(249): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(298): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(306): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(316): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(335): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(342): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(364): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(373): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(378): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(386): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(396): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(401): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(412): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(428): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_getimage.c(434): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+         tif_flush.c
+         tif_fax3sm.c
+         tif_fax3.c
+         tif_extension.c
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_extension.c(107): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+         tif_error.c
+         tif_dumpmode.c
+         tif_dirwrite.c
+         tif_dirread.c
+         tif_dirinfo.c
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_dirinfo.c(758): warning C4996: '_lfind': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _lfind. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\search.h(53) : see declaration of '_lfind'
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_dirinfo.c(841): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+         tif_dir.c
+         tif_compress.c
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_compress.c(201): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+         tif_color.c
+         tif_codec.c
+         tif_close.c
+         tif_aux.c
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\libjpeg /I..\zlib /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LIBTIFF382_EXPORTS /D __WIN32__ /D TIF_PLATFORM_CONSOLE /D BUILD_LIBTIFF_DLL /D _VC80_UPGRADE=0x0710 /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt libtiff\tif_stream.cxx
+         tif_stream.cxx
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_stream.cxx(64): warning C4244: 'return' : conversion from 'std::streamsize' to 'tsize_t', possible loss of data
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_stream.cxx(72): warning C4244: 'initializing' : conversion from 'std::streamoff' to 'int', possible loss of data
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_stream.cxx(93): warning C4244: 'return' : conversion from 'std::streamoff' to 'toff_t', possible loss of data
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_stream.cxx(123): warning C4244: '=' : conversion from 'std::streamoff' to 'toff_t', possible loss of data
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_stream.cxx(127): warning C4244: '=' : conversion from 'std::streamoff' to 'toff_t', possible loss of data
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_stream.cxx(134): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_stream.cxx(151): warning C4244: 'return' : conversion from 'std::streamoff' to 'toff_t', possible loss of data
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_stream.cxx(179): warning C4244: 'initializing' : conversion from 'std::streamoff' to 'toff_t', possible loss of data
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_stream.cxx(183): warning C4244: '=' : conversion from 'std::streamoff' to 'toff_t', possible loss of data
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_stream.cxx(193): warning C4244: 'initializing' : conversion from 'std::streamoff' to 'int', possible loss of data
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_stream.cxx(197): warning C4244: '=' : conversion from 'std::streamoff' to 'int', possible loss of data
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_stream.cxx(241): warning C4244: '=' : conversion from 'std::streamoff' to 'long', possible loss of data
+     1>c:\dev\ensg_vs13\libtiff-3.8.2\libtiff\tif_stream.cxx(253): warning C4244: '=' : conversion from 'std::streamoff' to 'long', possible loss of data
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1193,5): warning MSB8012: TargetPath(C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\libTiff-3.8.dll) does not match the Linker's OutputFile property value (C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\libTiff-3.8.2.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1195,5): warning MSB8012: TargetName(libTiff-3.8) does not match the Linker's OutputFile property value (libTiff-3.8.2). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\libTiff-3.8.2.dll" /INCREMENTAL /NOLOGO /LIBPATH:.\debug libjpegd.lib zlibd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Debug\libTiff-3.8.2.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"Debug\libTiff-3.8.2.lib" /MACHINE:X86 /SAFESEH /DLL Debug\tif_aux.obj
+         Debug\tif_close.obj
+         Debug\tif_codec.obj
+         Debug\tif_color.obj
+         Debug\tif_compress.obj
+         Debug\tif_dir.obj
+         Debug\tif_dirinfo.obj
+         Debug\tif_dirread.obj
+         Debug\tif_dirwrite.obj
+         Debug\tif_dumpmode.obj
+         Debug\tif_error.obj
+         Debug\tif_extension.obj
+         Debug\tif_fax3.obj
+         Debug\tif_fax3sm.obj
+         Debug\tif_flush.obj
+         Debug\tif_getimage.obj
+         Debug\tif_jpeg.obj
+         Debug\tif_luv.obj
+         Debug\tif_lzw.obj
+         Debug\tif_next.obj
+         Debug\tif_ojpeg.obj
+         Debug\tif_open.obj
+         Debug\tif_packbits.obj
+         Debug\tif_pixarlog.obj
+         Debug\tif_predict.obj
+         Debug\tif_print.obj
+         Debug\tif_read.obj
+         Debug\tif_stream.obj
+         Debug\tif_strip.obj
+         Debug\tif_swab.obj
+         Debug\tif_thunder.obj
+         Debug\tif_tile.obj
+         Debug\tif_version.obj
+         Debug\tif_warning.obj
+         Debug\tif_win32.obj
+         Debug\tif_write.obj
+         Debug\tif_zip.obj
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\libjpegd.lib"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\zlibd.lib"
+     1>tif_aux.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+            Creating library Debug\libTiff-3.8.2.lib and object Debug\libTiff-3.8.2.exp
+         libTiff-3.8.2.vcxproj -> C:\dev\ENSG_VS13\libTiff-3.8.2\Debug\libTiff-3.8.dll
+     1>Done Building Project "C:\dev\ENSG_VS13\libTiff-3.8.2\libTiff-3.8.2.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.52

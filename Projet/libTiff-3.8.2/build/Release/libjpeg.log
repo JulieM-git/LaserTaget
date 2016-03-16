@@ -1,0 +1,118 @@
+﻿Build started 01/10/2015 10:43:49.
+     1>Project "C:\dev\ENSG_VS13\libjpeg\libjpeg.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release\) contains files shared from another project (zlib.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\libjpeg /Zi /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _DLL /D _VC80_UPGRADE=0x0710 /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/" /Fd"C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/libjpeg.pdb" /Gd /TC /analyze- /errorReport:prompt jcapimin.c jcapistd.c jccoefct.c jccolor.c jcdctmgr.c jchuff.c jcinit.c jcmainct.c jcmarker.c jcmaster.c jcomapi.c jcparam.c jcphuff.c jcprepct.c jcsample.c jctrans.c jdapimin.c jdapistd.c jdatadst.c jdatasrc.c jdcoefct.c jdcolor.c jddctmgr.c jdhuff.c jdinput.c jdmainct.c jdmarker.c jdmaster.c jdmerge.c jdphuff.c jdpostct.c jdsample.c jdtrans.c jerror.c jfdctflt.c jfdctfst.c jfdctint.c jidctflt.c jidctfst.c jidctint.c jidctred.c jmemmgr.c jmemnobs.c jquant1.c jquant2.c jutils.c
+         jcapimin.c
+         jcapistd.c
+         jccoefct.c
+         jccolor.c
+         jcdctmgr.c
+         jchuff.c
+         jcinit.c
+         jcmainct.c
+         jcmarker.c
+         jcmaster.c
+         jcomapi.c
+         jcparam.c
+         jcphuff.c
+         jcprepct.c
+         jcsample.c
+         jctrans.c
+         jdapimin.c
+         jdapistd.c
+         jdatadst.c
+         jdatasrc.c
+         Generating Code...
+         Compiling...
+         jdcoefct.c
+         jdcolor.c
+         jddctmgr.c
+         jdhuff.c
+         jdinput.c
+         jdmainct.c
+         jdmarker.c
+         jdmaster.c
+         jdmerge.c
+         jdphuff.c
+         jdpostct.c
+         jdsample.c
+         jdtrans.c
+         jerror.c
+     1>jerror.c(193): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>jerror.c(199): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+         jfdctflt.c
+         jfdctfst.c
+         jfdctint.c
+         jidctflt.c
+         jidctfst.c
+         jidctint.c
+         Generating Code...
+         Compiling...
+         jidctred.c
+         jmemmgr.c
+     1>jmemmgr.c(1106): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdlib.h(462) : see declaration of 'getenv'
+     1>jmemmgr.c(1109): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+         jmemnobs.c
+         jquant1.c
+         jquant2.c
+         jutils.c
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\dev\ENSG_VS13\libTiff-3.8.2\Release\libjpeg.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:\dev\ENSG_VS13\libTiff-3.8.2\Release\libjpeg.pdb" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\dev\ENSG_VS13\libTiff-3.8.2\Release\libjpeg.lib" /MACHINE:X86 /SAFESEH /DLL "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jcapimin.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jcapistd.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jccoefct.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jccolor.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jcdctmgr.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jchuff.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jcinit.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jcmainct.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jcmarker.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jcmaster.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jcomapi.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jcparam.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jcphuff.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jcprepct.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jcsample.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jctrans.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdapimin.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdapistd.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdatadst.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdatasrc.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdcoefct.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdcolor.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jddctmgr.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdhuff.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdinput.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdmainct.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdmarker.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdmaster.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdmerge.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdphuff.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdpostct.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdsample.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jdtrans.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jerror.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jfdctflt.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jfdctfst.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jfdctint.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jidctflt.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jidctfst.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jidctint.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jidctred.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jmemmgr.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jmemnobs.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jquant1.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jquant2.obj"
+         "C:\dev\ENSG_VS13\libTiff-3.8.2\build/Release/jutils.obj"
+            Creating library C:\dev\ENSG_VS13\libTiff-3.8.2\Release\libjpeg.lib and object C:\dev\ENSG_VS13\libTiff-3.8.2\Release\libjpeg.exp
+         libjpeg.vcxproj -> C:\dev\ENSG_VS13\libTiff-3.8.2\Release\libjpeg.dll
+     1>Done Building Project "C:\dev\ENSG_VS13\libjpeg\libjpeg.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.61

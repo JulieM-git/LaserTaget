@@ -1,0 +1,46 @@
+﻿Build started 08/03/2016 18:05:35.
+     1>Project "C:\dev\ENSG_VS13\libXOrthoLaser\libXOrthoLaser.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\tinyxml /I..\libXTools /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D TIXML_USE_STL /D _USE_MATH_DEFINES /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt XOrthoLaserPoint.cpp
+         XOrthoLaserPoint.cpp
+     1>XOrthoLaserPoint.cpp(20): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>XOrthoLaserPoint.cpp(57): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+     1>XOrthoLaserPoint.cpp(63): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+     1>XOrthoLaserPoint.cpp(69): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+     1>XOrthoLaserPoint.cpp(73): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+     1>XOrthoLaserPoint.cpp(77): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+     1>XOrthoLaserPoint.cpp(89): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>XOrthoLaserPoint.cpp(108): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>XOrthoLaserPoint.cpp(111): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>XOrthoLaserPoint.cpp(128): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>XOrthoLaserPoint.cpp(129): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>XOrthoLaserPoint.cpp(130): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>XOrthoLaserPoint.cpp(190): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XOrthoLaserPoint.cpp(281): warning C4244: 'initializing' : conversion from 'std::streamsize' to 'int', possible loss of data
+     1>XOrthoLaserPoint.cpp(309): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>XOrthoLaserPoint.cpp(341): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XOrthoLaserPoint.cpp(356): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XOrthoLaserPoint.cpp(373): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XOrthoLaserPoint.cpp(417): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XOrthoLaserPoint.cpp(463): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\dev\ENSG_VS13\TestLibOrthoLaser\Release\libXOrthoLaser.lib" /NOLOGO /LTCG Release\XOrthoLaser.obj
+         Release\XOrthoLaserChantier.obj
+         Release\XOrthoLaserDalle.obj
+         Release\XOrthoLaserFolder.obj
+         Release\XOrthoLaserMesure.obj
+         Release\XOrthoLaserPile.obj
+         Release\XOrthoLaserPoint.obj
+         Release\XOrthoLaserRxp.obj
+         libXOrthoLaser.vcxproj -> C:\dev\ENSG_VS13\TestLibOrthoLaser\Release\libXOrthoLaser.lib
+     1>Done Building Project "C:\dev\ENSG_VS13\libXOrthoLaser\libXOrthoLaser.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.22

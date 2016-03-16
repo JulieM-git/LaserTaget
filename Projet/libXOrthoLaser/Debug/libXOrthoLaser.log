@@ -1,0 +1,9 @@
+﻿Build started 07/03/2016 19:25:38.
+     1>Project "C:\dev\ENSG_VS13\libXOrthoLaser\libXOrthoLaser.vcxproj" on node 2 (Build target(s)).
+     1>Lib:
+         libXOrthoLaser.vcxproj -> C:\dev\ENSG_VS13\TestLibOrthoLaser\Debug\libXOrthoLaser.lib
+     1>Done Building Project "C:\dev\ENSG_VS13\libXOrthoLaser\libXOrthoLaser.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.06
