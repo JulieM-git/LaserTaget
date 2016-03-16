@@ -1,0 +1,3 @@
+INFO 	InitInternalData	LaserTarget version 0.1	
+INFO	main	Chargement du fichier de config 	C:\Users\Loic\Documents\ProjetDev\code_VS13\LaserTarget\Debug\LaserTarget_Params.xml
+ERREUR	XLaserTargetProcess::LoadXmlFile	Tag obligatoire manquant :C:\Users\Loic\Documents\ProjetDev\code_VS13\LaserTarget\Debug\LaserTarget_Params.xml\LaserTarget_params\demi_cube_m	C:\Users\Loic\Documents\ProjetDev\code_VS13\LaserTarget\Debug\LaserTarget_Params.xml

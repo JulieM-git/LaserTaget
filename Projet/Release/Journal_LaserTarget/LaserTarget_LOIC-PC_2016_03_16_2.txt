@@ -1,0 +1,4 @@
+INFO 	InitInternalData	LaserTarget version 0.1	
+INFO	main	Chargement du fichier de config 	C:\Users\Loic\Documents\ProjetDev\code_VS13\LaserTarget\Release\LaserTarget_Params.xml
+ALERTE	main	Fichier de configuration non disponible	
+INFO	main	Le fichier de config (a renseigner) a ete cree	C:\Users\Loic\Documents\ProjetDev\code_VS13\LaserTarget\Release\LaserTarget_Params.xml

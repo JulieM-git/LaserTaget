@@ -1,1 +1,13 @@
-Compte rendu de la séance du 02 03 2016
+Compte rendu de la séance du 02 03 2016:
+    Découverte du sujet - Rencontre des commanditaires
+    Définition du rôle des membres de LaserTarget
+    Création du planning
+    Définition des logiciels à installer
+    Installation de Visual Studio Community 2013
+    Installation de Git for Windows
+    Configuration d'outil de versionning de code Git hébergé sur Github
+    Configuration d'outil de gestion de projet avec Asana
+    Définition d'un plan de séance
+    Définition d'une tache elementaire
+    Pot pourri des idées
+    

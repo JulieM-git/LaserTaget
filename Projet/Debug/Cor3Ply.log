@@ -1,0 +1,80 @@
+﻿Build started 16/03/2016 14:07:52.
+     1>Project "C:\Users\Loic\Documents\ProjetDev\code_VS13\LaserTarget\Cor3Ply.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\tinyxml /I..\ /I..\LibXTools /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _USE_MATH_DEFINES /D TIXML_USE_STL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt LaserTarget.cpp XFileLaser.cpp XLaserTargetProcess.cpp XPlyNuage.cpp XPlyPoint.cpp XPlyPointDivers.cpp XPlyPointPts.cpp
+         XPlyPointPts.cpp
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointpts.cpp(76): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointpts.cpp(84): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         XPlyPointDivers.cpp
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(41): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(42): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(43): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(159): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(160): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(161): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(187): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(188): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(189): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(235): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(236): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(237): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(292): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.cpp(388): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.cpp(395): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.cpp(462): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         XPlyPoint.cpp
+         XPlyNuage.cpp
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(41): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(42): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(43): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(159): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(160): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(161): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(187): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(188): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(189): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(235): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(236): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(237): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplypointdivers.h(292): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplynuage.cpp(47): warning C4244: 'initializing' : conversion from 'std::streamsize' to 'int', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplynuage.cpp(250): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplynuage.cpp(319): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplynuage.cpp(342): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplynuage.cpp(372): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplynuage.cpp(382): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xplynuage.cpp(387): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+         XLaserTargetProcess.cpp
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xlasertargetprocess.cpp(45): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xlasertargetprocess.cpp(96): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xlasertargetprocess.cpp(102): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xlasertargetprocess.cpp(109): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xlasertargetprocess.cpp(112): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xlasertargetprocess.cpp(129): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xlasertargetprocess.cpp(189): error C2039: 'min_nb_point_out' : is not a member of 'XLaserTargetParams'
+                 c:\users\loic\documents\projetdev\code_vs13\lasertarget\xlasertargetprocess.h(12) : see declaration of 'XLaserTargetParams'
+         XFileLaser.cpp
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xfilelaser.cpp(61): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xfilelaser.cpp(63): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xfilelaser.cpp(67): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xfilelaser.cpp(68): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\lasertarget\xfilelaser.cpp(69): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         LaserTarget.cpp
+         Generating Code...
+     1>Done Building Project "C:\Users\Loic\Documents\ProjetDev\code_VS13\LaserTarget\Cor3Ply.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:10.88

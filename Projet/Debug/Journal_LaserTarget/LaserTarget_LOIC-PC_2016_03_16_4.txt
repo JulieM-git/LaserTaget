@@ -1,0 +1,9 @@
+INFO 	InitInternalData	LaserTarget version 0.1	
+INFO	main	Chargement du fichier de config 	C:\Users\Loic\Documents\ProjetDev\code_VS13\LaserTarget\Debug\LaserTarget_Params.xml
+ Chargement du fichier cor
+INFO 	XLaserTargetProcess::InitProcess	Nombre de points a extraire : 160	
+ Repertoire en entree : C:\Users\Loic\Documents\ProjetDev\Data\
+INFO 	XLaserTargetProcess::InitProcess	Nombre de fichier a traiter : 1	
+ Repertoire de sortie : C:\Users\Loic\Documents\ProjetDev\Data\out\
+INFO	XLaserTargetProcess::Process	
+Traitement 1/1 : 	L025.ply

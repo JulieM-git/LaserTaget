@@ -1,0 +1,10 @@
+<LaserTarget_params>
+
+<input_path>C:\...</input_path><!-- dossier contenant les fichiers ply georéréférencés ou les fichiers pts+xyz-->
+<input_type>ply</input_type>
+
+<cor_inputfile>C:\...\peyruis.cor</cor_inputfile><!-- fichier cor contenant les points a extraire -->
+
+<output_path>C:\...\out</output_path>
+
+</LaserTarget_params>
