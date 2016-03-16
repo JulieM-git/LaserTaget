@@ -1,0 +1,4 @@
+INFO 	InitInternalData	TestLibOrthoLaser version 0.1	
+INFO	main	Chargement du fichier de config 	C:\dev\ENSG_VS13\TestLibOrthoLaser\Debug\TestLibOrthoLaser_Params.xml
+ALERTE	main	Fichier de configuration non disponible	
+INFO	main	Le fichier de config (a renseigner) a ete cree	C:\dev\ENSG_VS13\TestLibOrthoLaser\Debug\TestLibOrthoLaser_Params.xml

@@ -1,0 +1,4 @@
+INFO 	InitInternalData	TestLibOrthoLaser version 0.1	
+INFO	main	Chargement du fichier de config 	C:\dev\ENSG_VS13\TestLibOrthoLaser\Debug\TestLibOrthoLaser_Params.xml
+ Repertoire en entree : C:\Chantiers_TranslatExpress\TerMob2\OrthoLaserIni\
+ Repertoire de sortie : C:\dev\ENSG_VS13\TestLibOrthoLaser\Results\

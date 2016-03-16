@@ -1,0 +1,149 @@
+﻿Build started 16/03/2016 09:48:17.
+     1>Project "C:\Users\Loic\Documents\ProjetDev\code_VS13\libXTools\LibXTools.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"../libTiff-3.8.2/libtiff" /I../tinyxml /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D TIXML_USE_STL /D _USE_MATH_DEFINES /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ConsoleError.cpp XArchiGeoref.cpp XArchiGeorefXML.cpp XArchiXMLBaseTools.cpp XArchiXMLTools.cpp XErrorTxt.cpp XErrorXml.cpp XFileTxtReader.cpp XFrame.cpp XImage.cpp XImageLoader.cpp XImageTiffLoader.cpp XMat3D.cpp XPath.cpp XPt2D.cpp XPt3D.cpp XQuaternion.cpp XRawImage.cpp XRect.cpp XSensor.cpp XSensorXML.cpp XStringTools.cpp XSystemInfo.cpp
+         ConsoleError.cpp
+         XArchiGeoref.cpp
+     1>XArchiGeoref.cpp(64): warning C4244: 'initializing' : conversion from 'std::streamsize' to 'int', possible loss of data
+         XArchiGeorefXML.cpp
+         XArchiXMLBaseTools.cpp
+     1>XArchiXMLBaseTools.cpp(147): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>XArchiXMLBaseTools.cpp(155): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>XArchiXMLBaseTools.cpp(165): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>XArchiXMLBaseTools.cpp(173): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>XArchiXMLBaseTools.cpp(213): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>XArchiXMLBaseTools.cpp(223): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>XArchiXMLBaseTools.cpp(232): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>XArchiXMLBaseTools.cpp(240): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>XArchiXMLBaseTools.cpp(410): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>XArchiXMLBaseTools.cpp(422): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>XArchiXMLBaseTools.cpp(434): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+         XArchiXMLTools.cpp
+     1>XArchiXMLTools.cpp(36): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XArchiXMLTools.cpp(119): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>XArchiXMLTools.cpp(120): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>XArchiXMLTools.cpp(198): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XArchiXMLTools.cpp(219): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+         XErrorTxt.cpp
+         XErrorXml.cpp
+         XFileTxtReader.cpp
+     1>XFileTxtReader.cpp(47): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+         XFrame.cpp
+         XImage.cpp
+     1>c:\users\loic\documents\projetdev\code_vs13\libxtools\XImage.h(439): warning C4244: 'initializing' : conversion from 'double' to 'uint16', possible loss of data
+                 c:\users\loic\documents\projetdev\code_vs13\libxtools\XImage.h(435) : while compiling class template member function 'float XImage<unsigned char>::GetFloatPixBilin(double,double,uint16)'
+                 XImage.cpp(3) : see reference to class template instantiation 'XImage<unsigned char>' being compiled
+     1>c:\users\loic\documents\projetdev\code_vs13\libxtools\XImage.h(440): warning C4244: 'initializing' : conversion from 'double' to 'uint16', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\libxtools\XImage.h(449): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\libxtools\XImage.h(450): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\libxtools\XImage.h(451): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\libxtools\XImage.h(444): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\libxtools\XImage.h(445): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\libxtools\XImage.h(446): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\loic\documents\projetdev\code_vs13\libxtools\XImage.h(447): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         XImageLoader.cpp
+         XImageTiffLoader.cpp
+         XMat3D.cpp
+         XPath.cpp
+         XPt2D.cpp
+         XPt3D.cpp
+         XQuaternion.cpp
+         XRawImage.cpp
+     1>XRawImage.cpp(111): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XRawImage.cpp(194): warning C4244: 'initializing' : conversion from 'double' to 'uint32', possible loss of data
+     1>XRawImage.cpp(196): warning C4244: 'initializing' : conversion from 'double' to 'uint32', possible loss of data
+     1>XRawImage.cpp(336): warning C4244: 'initializing' : conversion from 'double' to 'uint32', possible loss of data
+     1>XRawImage.cpp(337): warning C4244: 'initializing' : conversion from 'double' to 'uint32', possible loss of data
+     1>XRawImage.cpp(659): warning C4018: '<' : signed/unsigned mismatch
+     1>XRawImage.cpp(747): warning C4018: '<' : signed/unsigned mismatch
+     1>XRawImage.cpp(769): warning C4018: '<' : signed/unsigned mismatch
+         XRect.cpp
+         XSensor.cpp
+     1>XSensor.cpp(325): warning C4150: deletion of pointer to incomplete type 'XDistoImageData'; no destructor called
+                 c:\users\loic\documents\projetdev\code_vs13\libxtools\XSensor.h(14) : see declaration of 'XDistoImageData'
+     1>XSensor.cpp(932): warning C4244: 'initializing' : conversion from 'std::streamsize' to 'int', possible loss of data
+     1>XSensor.cpp(1001): warning C4244: 'initializing' : conversion from 'std::streamsize' to 'int', possible loss of data
+         Compiling...
+         XSensorXML.cpp
+     1>XSensorXML.cpp(78): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XSensorXML.cpp(224): warning C4244: 'argument' : conversion from 'double' to 'uint32', possible loss of data
+     1>XSensorXML.cpp(243): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+         XStringTools.cpp
+     1>XStringTools.cpp(62): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XStringTools.cpp(166): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : see declaration of 'sscanf'
+     1>XStringTools.cpp(386): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+         XSystemInfo.cpp
+     1>XSystemInfo.cpp(184): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\string.h(112) : see declaration of 'strcpy'
+     1>XSystemInfo.cpp(230): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
+     1>XSystemInfo.cpp(306): warning C4244: 'initializing' : conversion from 'LONGLONG' to 'double', possible loss of data
+     1>XSystemInfo.cpp(335): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XSystemInfo.cpp(555): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XSystemInfo.cpp(566): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XSystemInfo.cpp(575): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XSystemInfo.cpp(577): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XSystemInfo.cpp(641): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
+     1>XSystemInfo.cpp(646): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
+     1>XSystemInfo.cpp(786): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
+     1>XSystemInfo.cpp(849): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\stdio.h(356) : see declaration of 'sprintf'
+     1>XSystemInfo.cpp(871): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
+     1>XSystemInfo.cpp(968): warning C4244: 'initializing' : conversion from 'DWORD' to 'uint16', possible loss of data
+       Lib:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Loic\Documents\ProjetDev\code_VS13\LaserTarget\Release\LibXTools.lib" /NOLOGO /LTCG Release\ConsoleError.obj
+         Release\XArchiGeoref.obj
+         Release\XArchiGeorefXML.obj
+         Release\XArchiXMLBaseTools.obj
+         Release\XArchiXMLTools.obj
+         Release\XErrorTxt.obj
+         Release\XErrorXml.obj
+         Release\XFileTxtReader.obj
+         Release\XFrame.obj
+         Release\XImage.obj
+         Release\XImageLoader.obj
+         Release\XImageTiffLoader.obj
+         Release\XMat3D.obj
+         Release\XPath.obj
+         Release\XPt2D.obj
+         Release\XPt3D.obj
+         Release\XQuaternion.obj
+         Release\XRawImage.obj
+         Release\XRect.obj
+         Release\XSensor.obj
+         Release\XSensorXML.obj
+         Release\XStringTools.obj
+         Release\XSystemInfo.obj
+         LibXTools.vcxproj -> C:\Users\Loic\Documents\ProjetDev\code_VS13\LaserTarget\Release\LibXTools.lib
+     1>Done Building Project "C:\Users\Loic\Documents\ProjetDev\code_VS13\libXTools\LibXTools.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:29.65

@@ -1,0 +1,4 @@
+<TestLibOrthoLaser_params>
+<input_path>C:\Chantiers_TranslatExpress\TerMob2\orthos_laser</input_path>
+<output_path>C:\dev\ENSG_VS13\TestLibOrthoLaser\Results </output_path>
+</TestLibOrthoLaser_params>

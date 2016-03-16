@@ -1,0 +1,3 @@
+INFO 	InitInternalData	TestLibOrthoLaser version 0.1	
+INFO	main	Chargement du fichier de config 	C:\dev\ENSG_VS13\TestLibOrthoLaser\Debug\TestLibOrthoLaser_Params.xml
+ERREUR	XTestLibOrthoLaserProcess::LoadXmlFile	Champ obligatoire non rempli :C:\dev\ENSG_VS13\TestLibOrthoLaser\Debug\TestLibOrthoLaser_Params.xml\TestLibOrthoLaser_params\output_path	C:\dev\ENSG_VS13\TestLibOrthoLaser\Debug\TestLibOrthoLaser_Params.xml

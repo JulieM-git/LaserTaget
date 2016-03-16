@@ -1,0 +1,12 @@
+﻿Build started 07/03/2016 19:26:49.
+     1>Project "C:\dev\ENSG_VS13\TestLibOrthoLaser\TestLibOrthoLaser.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\dev\ENSG_VS13\TestLibOrthoLaser\Debug\TestLibOrthoLaser.exe" /INCREMENTAL /NOLOGO /LIBPATH:./Debug /LIBPATH:../tinyxml/Debug libXOrthoLaser.lib libXTools.lib tinyxml.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\dev\ENSG_VS13\TestLibOrthoLaser\Debug\TestLibOrthoLaser.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\dev\ENSG_VS13\TestLibOrthoLaser\Debug\TestLibOrthoLaser.lib" /MACHINE:X86 /SAFESEH Debug\TestLibOrthoLaser.obj
+         Debug\XTestLibOrthoLaserProcess.obj
+     1>TestLibOrthoLaser.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+         TestLibOrthoLaser.vcxproj -> C:\dev\ENSG_VS13\TestLibOrthoLaser\Debug\TestLibOrthoLaser.exe
+     1>Done Building Project "C:\dev\ENSG_VS13\TestLibOrthoLaser\TestLibOrthoLaser.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.07
