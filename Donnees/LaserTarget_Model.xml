@@ -4,34 +4,34 @@
 		<pathDataBase> C:\...\</pathDataBase>
 		<model class = "cible" id = "1">
 			<nom>Ciblette 2</nom><!-- nom -->
-			<rayon>0.002</rayon><!-- en metre -->
+			<!--<rayon>0.002</rayon> en metre -->
 			<image2D>ciblette1.png</image2D><!-- chemin -->
-			<nuage>nuage_ciblette1.ply</nuage><!-- chemin -->
-			<!--<resolution>valeur</resolution> valeur -->
+			<!-- <nuage>nuage_ciblette1.ply</nuage>chemin -->
+			<resolution>valeur</resolution><!-- valeur -->
 		</model>
 
 		<model class = "cible" id = "2">
 			<nom>Ciblette 2.5</nom><!-- nom -->
-			<rayon>0.0025</rayon><!-- en metre -->
+			<!--<rayon>0.0025</rayon> en metre -->
 			<image2D>ciblette2.5.png</image2D><!-- chemin -->
-			<nuage>nuage_ciblette2.5.ply</nuage><!-- chemin -->
-			<!--<resolution>valeur</resolution> valeur -->
+			<!--<nuage>nuage_ciblette2.5.ply</nuage> chemin -->
+			<resolution>valeur</resolution><!-- valeur -->
 		</model>
 
 		<model class = "cible" id = "3">
 			<nom>BW</nom><!-- nom -->
-			<rayon>0.005</rayon><!-- en metre -->
+			<!--<rayon>0.005</rayon> en metre -->
 			<image2D>BW.png</image2D><!-- chemin -->
-			<nuage>nuage_BW.ply</nuage><!-- chemin -->
-			<!-- <resolution>valeur</resolution>valeur -->
+			<!--<nuage>nuage_BW.ply</nuage> chemin -->
+			<resolution>valeur</resolution><!-- valeur -->
 		</model>
 
 		<model class = "cible" id = "4">
 			<nom>HDS</nom><!-- nom -->
-			<rayon>0.00762</rayon><!-- en metre -->
+			<!-- <rayon>0.00762</rayon>en metre -->
 			<image2D>HDS.png</image2D><!-- chemin -->
-			<nuage>nuage_HDS.png</nuage><!-- chemin -->
-			<!--<resolution>valeur</resolution> valeur -->
+			<!--<nuage>nuage_HDS.png</nuage> chemin -->
+			<resolution>valeur</resolution><!-- valeur -->
 		</model>
 
 		<model class = "sphere" id = "5">
@@ -40,7 +40,7 @@
 			<couleur>vert</couleur><!-- couleur -->
 			<image2D>ping_pong_v.png</image2D><!-- chemin -->
 			<nuage>nuage_ping_pong_v.ply</nuage><!-- chemin -->
-			<!--<resolution>valeur</resolution> valeur -->
+			<resolution>valeur</resolution><!-- valeur -->
 		</model>
 
 		<model class = "sphere" id = "6">
@@ -49,7 +49,7 @@
 			<couleur>rouge</couleur><!-- couleur -->
 			<image2D>ping_pong_r.png</image2D><!-- chemin -->
 			<nuage>nuage_ping_pong_r.ply</nuage><!-- chemin -->
-			<!--<resolution>valeur</resolution> valeur -->
+			<resolution>valeur</resolution><!-- valeur -->
 		</model>
 
 		<model class = "sphere" id = "7">
@@ -58,7 +58,7 @@
 			<couleur>blanc</couleur><!-- couleur -->
 			<image2D>b_porcelaine.png</image2D><!-- chemin -->
 			<nuage>nuage_b_porcelaine.png</nuage><!-- chemin -->
-			<!--<resolution>valeur</resolution> valeur -->
+			<resolution>valeur</resolution><!-- valeur -->
 		</model>
 	</DataBase>
 </LaserTarget_params>

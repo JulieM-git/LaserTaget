@@ -4,6 +4,9 @@ Projet/LaserTarget/Release/
 Projet/LaserTarget/LaserTargetProject.opensdf
 Projet/LaserTarget/LaserTargetProject.sdf
 Projet/LaserTarget/LaserTargetProject.v12.suo
-Projet/libXTools/
+Projet/libXTools/*
+Projet/libXTools/Debug/
 
 
+
+*.obj

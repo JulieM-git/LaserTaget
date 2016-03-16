@@ -139,15 +139,6 @@ bool XLaserTargetProcess::ProcessPlyLaser3ply(XPlyPoint* pt)
 	for( std::map<XLaserPoint*, std::vector<XPlyPoint*>>::iterator iter = vec3Ply.begin(); iter != vec3Ply.end(); iter++ ) 
 	{
 		XPt3D p2 =*(*iter).first;
-		
-		/*
-		if(abs(p1.X-p2.X) > m_params.demi_cube_m)
-			continue;
-		if(abs(p1.Y-p2.Y) > m_params.demi_cube_m)
-			continue;
-		if(abs(p1.Z-p2.Z) > m_params.demi_cube_m)
-			continue;
-		*/
 		XPlyPoint* newPoint = pt->Clone();
 		(*iter).second.push_back(newPoint);
 	}
@@ -190,10 +181,31 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 	char message[1024];
 	std::string plyinput = P.NameNoExt(filename.c_str());
 
-	
+	std::map<XLaserPoint*, std::vector<XPlyPoint*>>::iterator iter = vec3Ply.begin();
+
+	std::vector<std::vector<float>> points;
+
+	for (uint32 i = 0; i < (*iter).second.size(); i++)
+	{
+		XPlyPoint* pt = (*iter).second[i]; // Point i 
+		XPt3D p1 = pt->Position();
+		std::vector<float> coordonnees;
+			// Acceder au x, y, z
+		float x = p1.X;
+		float y = p1.Y;
+		float z = p1.Z;
+		coordonnees.push_back(x);
+		coordonnees.push_back(y);
+		coordonnees.push_back(z);
+		points.push_back(coordonnees);
+
+
+	}
+
+	/*
 	for( std::map<XLaserPoint*, std::vector<XPlyPoint*>>::iterator iter = vec3Ply.begin(); iter != vec3Ply.end(); iter++ ) 
 	{
-		/*
+		
 		if((*iter).second.size() > m_params.min_nb_point_out)
 		{
 			std::string outfilename = m_params.output_path + XPath::PathSep + (*iter).first->Id + "_" + plyinput + ".ply";
@@ -207,10 +219,10 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 				(*iter).second[i]->WriteBinary(plyOut.out);
 			plyOut.out->close();
 		}
-		*/
+		
 		
 	}
-	
+	*/
 
 	return true;	
 }
