@@ -6,6 +6,7 @@
 #include "XSystemInfo.h"
 #include "XPath.h"
 #include "XPlyNuage.h"
+#include "XPlanProcess.h"
 
 //-----------------------------------------------------------------------------
 XLaserTargetParams::XLaserTargetParams(void)
@@ -202,6 +203,23 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 
 	}
 
+	XPlanProcess detection;
+	std::vector<float> parametrePlan = detection.determinationEquationPlan(points);
+	
+	std::vector<std::vector<float>> pointsProjetes;
+	std::vector<float> carteProfondeur;
+	std::vector<float> normal;
+	normal.push_back(parametrePlan[0]);
+	normal.push_back(parametrePlan[1]);
+	normal.push_back(parametrePlan[2]);
+
+	for (uint32 i = 0; i < points.size(); i++)
+	{
+		pointsProjetes.push_back(detection.projectionAuPlan(parametrePlan, points[i]));
+		carteProfondeur.push_back(detection.profondeurAuPlan(normal, pointsProjetes[i], points[i]));
+	}
+
+
 	/*
 	for( std::map<XLaserPoint*, std::vector<XPlyPoint*>>::iterator iter = vec3Ply.begin(); iter != vec3Ply.end(); iter++ ) 
 	{
@@ -226,3 +244,4 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 
 	return true;	
 }
+

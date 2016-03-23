@@ -5,6 +5,7 @@
 #include "XPath.h"
 
 #include "XFileLaser.h"
+#include "XPlanProcess.h"
 #include <map>
 
 //-----------------------------------------------------------------------------
