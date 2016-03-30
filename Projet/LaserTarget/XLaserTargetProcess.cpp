@@ -8,6 +8,8 @@
 #include "XPlyNuage.h"
 #include "XPlanProcess.h"
 
+#include <Eigen/Dense>
+
 //-----------------------------------------------------------------------------
 XLaserTargetParams::XLaserTargetParams(void)
 {
@@ -206,7 +208,8 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 	XPlanProcess detection;
 	std::vector<float> parametrePlan = detection.determinationEquationPlan(points);
 	
-	std::vector<std::vector<float>> pointsProjetes;
+	std::vector<std::vector<float>> pointsProjetesSurPlanEnCoordonneesTerrain;
+	std::vector<std::vector<float>> pointsProjetesSurPlanEnCoordonneesOrtho;
 	std::vector<float> carteProfondeur;
 	std::vector<float> normal;
 	normal.push_back(parametrePlan[0]);
@@ -215,11 +218,25 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 
 	for (uint32 i = 0; i < points.size(); i++)
 	{
-		pointsProjetes.push_back(detection.projectionAuPlan(parametrePlan, points[i]));
-		carteProfondeur.push_back(detection.profondeurAuPlan(normal, pointsProjetes[i], points[i]));
+		pointsProjetesSurPlanEnCoordonneesTerrain.push_back(detection.projectionAuPlan(parametrePlan, points[i]));
+		carteProfondeur.push_back(detection.profondeurAuPlan(normal, pointsProjetesSurPlanEnCoordonneesTerrain[i], points[i]));
 	}
+	detection.constructionBase();
+	detection.matricePassageReferentielLaserVersReferentielOrthoimage();
+	detection.matricePassageReferentielOrthoimageVersReferentielLaser();
 
+	pointsProjetesSurPlanEnCoordonneesOrtho = detection.changementEnBaseOrtho(pointsProjetesSurPlanEnCoordonneesTerrain);
 
+	std::vector<float> bornes = detection.bornesDeLOrtho(pointsProjetesSurPlanEnCoordonneesOrtho);
+
+	/*
+	Eigen::MatrixXd m(2, 2);
+	m(0, 0) = 3;
+	m(1, 0) = 2.5;
+	m(0, 1) = -1;
+	m(1, 1) = m(1, 0) + m(0, 1);
+	std::cout << m << std::endl;
+	*/
 	/*
 	for( std::map<XLaserPoint*, std::vector<XPlyPoint*>>::iterator iter = vec3Ply.begin(); iter != vec3Ply.end(); iter++ ) 
 	{

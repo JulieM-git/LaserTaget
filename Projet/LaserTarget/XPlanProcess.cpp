@@ -34,6 +34,9 @@ std::vector<float> XPlanProcess::determinationEquationPlan(std::vector<std::vect
 	float Ay = sum_y / a;
 	float Az = sum_z / a;
 
+	
+	A << Ax, Ay, Az;
+
 	sum_x = 0;
 	sum_y = 0;
 	sum_z = 0;
@@ -72,6 +75,7 @@ std::vector<float> XPlanProcess::determinationEquationPlan(std::vector<std::vect
 	AB.push_back(Bx - Ax);
 	AB.push_back(By - Ay);
 	AB.push_back(Bz - Az);
+	vecteurDirecteur1 = AB;
 
 	std::vector<float> AC;
 	AC.push_back(Cx - Ax);
@@ -97,6 +101,7 @@ std::vector<float> XPlanProcess::determinationEquationPlan(std::vector<std::vect
 	normal[1] /= sum;
 	normal[2] /= sum;
 	
+	vecteurNormal = normal;
 
 	float d = normal[0] * Ax + normal[1] * Ay + normal[2] * Az;
 	std::vector<float> parametresPlan;
@@ -109,6 +114,8 @@ std::vector<float> XPlanProcess::determinationEquationPlan(std::vector<std::vect
 	return parametresPlan;
 
 }
+
+
 
 
 float XPlanProcess::profondeurAuPlan(std::vector<float> normal, std::vector<float> A, std::vector<float> M)
@@ -137,6 +144,15 @@ float XPlanProcess::norme(std::vector<float> U)
 	return  sqrt(U[0] * U[0] + U[1] * U[1] + U[2] * U[2]);
 }
 
+std::vector<float> XPlanProcess::produitVectoriel(std::vector<float> AB, std::vector<float> AC)
+{
+	std::vector<float> normal;
+	normal.push_back(AB[1] * AC[2] - AB[2] * AC[1]);
+	normal.push_back(-AB[0] * AC[2] + AB[2] * AC[0]);
+	normal.push_back(AB[0] * AC[1] - AB[1] * AC[0]);
+	return normal;
+}
+
 std::vector<float> XPlanProcess::projectionAuPlan(std::vector<float> parametrePlan, std::vector<float> pointM)
 {
 	float t = -(parametrePlan[0] * pointM[0] + parametrePlan[1] * pointM[1] + parametrePlan[2] * pointM[2] - parametrePlan[3]) / (parametrePlan[0] * parametrePlan[0] + parametrePlan[1] * parametrePlan[1] + parametrePlan[2] * parametrePlan[2]);
@@ -148,4 +164,117 @@ std::vector<float> XPlanProcess::projectionAuPlan(std::vector<float> parametrePl
 
 	return MPlan;
 
+}
+
+void XPlanProcess::constructionBase()
+{
+	for (uint32 i = 0; i < vecteurDirecteur1.size(); i++)
+	{
+		baseXprime.push_back(0);
+		baseXprime[i] = vecteurDirecteur1[i];// / norme(vecteurDirecteur1);
+	}
+
+	for (uint32 i = 0; i < vecteurNormal.size(); i++)
+	{
+		baseZprime.push_back(0);
+		baseZprime[i] = vecteurNormal[i];// / norme(vecteurNormal);
+	}
+	
+	baseYprime = produitVectoriel(baseZprime, baseXprime);
+
+	float a = norme(baseXprime);
+	float b = norme(baseYprime);
+	float c = norme(baseZprime);
+
+}
+
+void XPlanProcess::matricePassageReferentielLaserVersReferentielOrthoimage()
+{
+	P(0, 0) = baseXprime[0];
+	P(1, 0) = baseXprime[1];
+	P(2, 0) = baseXprime[2];
+
+	P(0, 1) = baseYprime[0];
+	P(1, 1) = baseYprime[1];
+	P(2, 1) = baseYprime[2];
+
+	P(0, 2) = baseZprime[0];
+	P(1, 2) = baseZprime[1];
+	P(2, 2) = baseZprime[2];
+	std::cout << P << std::endl;
+	float a = 0;
+}
+
+void XPlanProcess::matricePassageReferentielOrthoimageVersReferentielLaser()
+{
+	Pinverse = P.inverse();
+	std::cout << P.inverse() << std::endl;
+	float a = 0;
+
+}
+
+
+std::vector<std::vector<float>> XPlanProcess::changementEnBaseOrtho(std::vector<std::vector<float>> pointsProjetesSurPlanEnCoordonneesTerrain)
+{
+	std::vector<std::vector<float>> pointsProjetesSurPlanEnCoordonneesOrtho;
+	Eigen::Vector3f X(3, 1);
+	Eigen::Vector3f Xprime(3, 1);
+	std::vector<float> pointTraite;
+	
+	for (uint32 i = 0; i < pointsProjetesSurPlanEnCoordonneesTerrain.size(); i++)
+	{
+		pointTraite = pointsProjetesSurPlanEnCoordonneesTerrain[i];
+		X(0, 0) = pointTraite[0]-A(0);
+		X(1, 0) = pointTraite[1]-A(1);
+		X(2, 0) = pointTraite[2]-A(2);
+		Xprime = Pinverse * X;
+		std::vector<float> pointTraiteCoordonneesOrtho;
+		pointTraiteCoordonneesOrtho.push_back(Xprime(0, 0));
+		pointTraiteCoordonneesOrtho.push_back(Xprime(1, 0));
+		pointTraiteCoordonneesOrtho.push_back(Xprime(2, 0));
+
+		pointsProjetesSurPlanEnCoordonneesOrtho.push_back(pointTraiteCoordonneesOrtho);
+	}
+	
+	return pointsProjetesSurPlanEnCoordonneesOrtho;
+}
+
+std::vector<float> XPlanProcess::bornesDeLOrtho(std::vector<std::vector<float>> pointsProjetesSurPlanEnCoordonneesOrtho){
+	std::vector<float> XMinYMinXMaxYMax;
+	float Xmin;
+	float Ymin;
+	float Xmax;
+	float Ymax;
+	Xmin = pointsProjetesSurPlanEnCoordonneesOrtho[0][0];
+	Ymin = pointsProjetesSurPlanEnCoordonneesOrtho[0][1]; 
+	Xmax = pointsProjetesSurPlanEnCoordonneesOrtho[0][0];
+	Ymax = pointsProjetesSurPlanEnCoordonneesOrtho[0][1];
+
+	// Recherche de 
+	for (uint32 i = 0; i < pointsProjetesSurPlanEnCoordonneesOrtho.size(); i++)
+	{
+		if (pointsProjetesSurPlanEnCoordonneesOrtho[i][0] <= Xmin)
+		{
+			Xmin = pointsProjetesSurPlanEnCoordonneesOrtho[i][0];
+		}
+		if (pointsProjetesSurPlanEnCoordonneesOrtho[i][1] <= Ymin)
+		{
+			Ymin = pointsProjetesSurPlanEnCoordonneesOrtho[i][1];
+		}
+		if (pointsProjetesSurPlanEnCoordonneesOrtho[i][0] >= Xmax)
+		{
+			Ymin = pointsProjetesSurPlanEnCoordonneesOrtho[i][0];
+		}
+		if (pointsProjetesSurPlanEnCoordonneesOrtho[i][1] >= Ymax)
+		{
+			Ymin = pointsProjetesSurPlanEnCoordonneesOrtho[i][1];
+		}
+	}
+
+	XMinYMinXMaxYMax.push_back(Xmin);
+	XMinYMinXMaxYMax.push_back(Ymin);
+	XMinYMinXMaxYMax.push_back(Xmax);
+	XMinYMinXMaxYMax.push_back(Ymax);
+	
+	return XMinYMinXMaxYMax;
 }
