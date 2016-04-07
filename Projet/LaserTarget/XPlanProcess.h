@@ -24,6 +24,8 @@ public:
 	Eigen::Matrix3f Pinverse;
 	Eigen::Vector3f A;
 
+	std::vector<float> bornes;
+
 	std::vector<float> XPlanProcess::determinationEquationPlan(std::vector<std::vector<float>>);
 	float XPlanProcess::profondeurAuPlan(std::vector<float>, std::vector<float>, std::vector<float>);
 	float XPlanProcess::produitScalaire(std::vector<float>, std::vector<float>);
@@ -35,5 +37,13 @@ public:
 	void XPlanProcess::matricePassageReferentielOrthoimageVersReferentielLaser();
 	std::vector<std::vector<float>> XPlanProcess::changementEnBaseOrtho(std::vector<std::vector<float>>);
 	std::vector<float> XPlanProcess::bornesDeLOrtho(std::vector<std::vector<float>>);
+	std::vector<std::vector<float>> XPlanProcess::changementOrigine(std::vector<std::vector<float>>, std::vector<float>);
+
+
+
+	int XPlanProcess::cherchePixelCompatible(std::vector<std::vector<float>> &, int, int, float, float);
+	
+	
+
 };
 

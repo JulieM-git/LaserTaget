@@ -2,6 +2,8 @@
 #include "XErrorConsole.h"
 #include "XSystemInfo.h"
 #include "XPath.h"
+#include "XImageTiffLoader.h"
+#include "XRawImage.h"
 
 #include <conio.h>
 
@@ -70,6 +72,9 @@ int main(int argc, char **argv)
 	if( !m_process->InitProcess())
         return XErrorError(m_error,__FUNCTION__," Erreur au chargement du capteur");
       
+	XImageTiffWriter*  TIFFWriter = new XImageTiffWriter(m_error);
+	XRawImage::RegisterWriter(TIFFWriter, "tif");
+
 	m_process->Process();
 
     std::cout<<" exit"<<std::endl;

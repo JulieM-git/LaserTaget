@@ -1,5 +1,5 @@
-﻿Build started 28/03/2016 22:17:43.
-     1>Project "C:\Users\Loic\Documents\GitHub\LaserTarget\Projet\libXTools\LibXTools.vcxproj" on node 3 (Rebuild target(s)).
+﻿Build started 06/04/2016 14:39:47.
+     1>Project "C:\Users\Loic\Documents\GitHub\LaserTarget\Projet\libXTools\LibXTools.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"../libTiff-3.8.2/libtiff" /I../tinyxml /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D TIXML_USE_STL /D _USE_MATH_DEFINES /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ConsoleError.cpp XArchiGeoref.cpp XArchiGeorefXML.cpp XArchiXMLBaseTools.cpp XArchiXMLTools.cpp XErrorTxt.cpp XErrorXml.cpp XFileTxtReader.cpp XFrame.cpp XImage.cpp XImageLoader.cpp XImageTiffLoader.cpp XMat3D.cpp XPath.cpp XPt2D.cpp XPt3D.cpp XQuaternion.cpp XRawImage.cpp XRect.cpp XSensor.cpp XSensorXML.cpp XStringTools.cpp XSystemInfo.cpp
          XSystemInfo.cpp
@@ -149,4 +149,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:53.49
+Time Elapsed 00:00:33.23

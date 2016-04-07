@@ -7,6 +7,7 @@
 #include "XPath.h"
 #include "XPlyNuage.h"
 #include "XPlanProcess.h"
+#include "XRawImage.h"
 
 #include <Eigen/Dense>
 
@@ -186,57 +187,241 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 
 	std::map<XLaserPoint*, std::vector<XPlyPoint*>>::iterator iter = vec3Ply.begin();
 
-	std::vector<std::vector<float>> points;
+	std::string cas("sphère");
 
-	for (uint32 i = 0; i < (*iter).second.size(); i++)
+	if (cas.compare("cible") == 0)
 	{
-		XPlyPoint* pt = (*iter).second[i]; // Point i 
-		XPt3D p1 = pt->Position();
-		std::vector<float> coordonnees;
+		std::vector<std::vector<float>> points;
+
+		for (uint32 i = 0; i < (*iter).second.size(); i++)
+		{
+			XPlyPoint* pt = (*iter).second[i]; // Point i 
+			XPt3D p1 = pt->Position();
+			std::vector<float> coordonnees;
 			// Acceder au x, y, z
-		float x = p1.X;
-		float y = p1.Y;
-		float z = p1.Z;
-		coordonnees.push_back(x);
-		coordonnees.push_back(y);
-		coordonnees.push_back(z);
-		points.push_back(coordonnees);
+			float x = p1.X;
+			float y = p1.Y;
+			float z = p1.Z;
+			coordonnees.push_back(x);
+			coordonnees.push_back(y);
+			coordonnees.push_back(z);
+			points.push_back(coordonnees);
 
 
+		}
+
+		XPlanProcess detection;
+		std::vector<float> parametrePlan = detection.determinationEquationPlan(points);
+
+		std::vector<std::vector<float>> pointsProjetesSurPlanEnCoordonneesTerrain;
+		std::vector<std::vector<float>> pointsProjetesSurPlanEnCoordonneesOrtho;
+		std::vector<float> carteProfondeur;
+		std::vector<float> normal;
+		normal.push_back(parametrePlan[0]);
+		normal.push_back(parametrePlan[1]);
+		normal.push_back(parametrePlan[2]);
+
+		for (uint32 i = 0; i < points.size(); i++)
+		{
+			pointsProjetesSurPlanEnCoordonneesTerrain.push_back(detection.projectionAuPlan(parametrePlan, points[i]));
+			carteProfondeur.push_back(detection.profondeurAuPlan(normal, pointsProjetesSurPlanEnCoordonneesTerrain[i], points[i]));
+		}
+		detection.constructionBase();
+		detection.matricePassageReferentielLaserVersReferentielOrthoimage();
+		detection.matricePassageReferentielOrthoimageVersReferentielLaser();
+
+		pointsProjetesSurPlanEnCoordonneesOrtho = detection.changementEnBaseOrtho(pointsProjetesSurPlanEnCoordonneesTerrain);
+
+		std::vector<float> bornes = detection.bornesDeLOrtho(pointsProjetesSurPlanEnCoordonneesOrtho);
+
+		std::vector<std::vector<float>>pointsProjetesSurPlanEnCoordonneesOrthoTranslate;
+		pointsProjetesSurPlanEnCoordonneesOrthoTranslate = detection.changementOrigine(pointsProjetesSurPlanEnCoordonneesOrtho, bornes);
+
+
+		// Generation de l'orthoimage
+		// Configuration de l'orthoimage
+		int colonne = 25;
+		int ligne = 25;
+		// Equivalence de la taille d'un pixel en coordonnees terrain
+		float taillePixelLigne = (bornes[3] - bornes[1]) / ligne;
+		float taillePixelColonne = (bornes[2] - bornes[0]) / colonne;
+
+		// Recuperation des valeurs extremales de l'intensite du nuage de point
+		// Initialisation de ces valeurs
+		XPlyPoint* pt = (*iter).second[0];
+		float p0 = pt->Intensity();
+		float minIntensite = p0;
+		float maxIntensite = p0;
+
+		for (uint32 i = 0; i < (*iter).second.size(); i++)
+		{
+			XPlyPoint* pt = (*iter).second[i]; // Point i 
+			float p1 = pt->Intensity();
+			if (p1 < minIntensite)
+			{
+				minIntensite = p1;
+				continue;
+			}
+			if (p1 > maxIntensite)
+			{
+				maxIntensite = p1;
+			}
+		}
+
+		// Calcul du ratio pour normaliser la valeur d'intensite entre 0 et 255
+		float ratio = 255 / (maxIntensite + abs(minIntensite));
+
+		// Coloriage de l'orthoimage
+		XRawImage MonoImage(colonne, ligne, 8, 1, NULL);
+		byte* pix = MonoImage.Pixels();
+		memset(pix, 0, colonne*ligne);
+
+		// Image qui va stocker l'identifiant du point du nuage selectionné pour colorier l'image (utile pour les transformations inverses)
+		XRawImage ImageIndiceCorrespondante(colonne, ligne, 8, 1, NULL);
+		byte* pix_ImageIndiceCorrespondante = ImageIndiceCorrespondante.Pixels();
+		memset(pix_ImageIndiceCorrespondante, -1, colonne*ligne);
+
+		// Coloriage
+		int i = ligne * colonne;
+		for (int ligneEnCours = 0; ligneEnCours < ligne; ligneEnCours++)
+		{
+			for (int colonneEnCours = 0; colonneEnCours < colonne; colonneEnCours++)
+			{
+				// Detection du point qui va servir pour colorier ce pixel
+				int indicePointAAjouter = detection.cherchePixelCompatible(pointsProjetesSurPlanEnCoordonneesOrthoTranslate, colonneEnCours, ligneEnCours, taillePixelColonne, taillePixelLigne);
+
+				// Si un point correspond on normalise son intensité et on rajoute son intensite dans l'ortho et son indice dans l'autre image
+				if (indicePointAAjouter != -1)
+				{
+					XPlyPoint* pt2 = (*iter).second[indicePointAAjouter]; // Point i
+					float p1 = pt2->Intensity();
+					*pix = (unsigned char)floor((p1 + abs(minIntensite))*ratio);
+					*pix_ImageIndiceCorrespondante = indicePointAAjouter;
+				}
+
+				std::cout << i << std::endl;
+				i--;
+				pix++;
+			}
+		}
+
+		// Ecriture de l'image
+		XPath P;
+
+		std::string file = m_params.output_path + plyinput.c_str() + "_ortho_" + std::to_string(colonne) + "x" + std::to_string(ligne) + ".tif";
+		MonoImage.WriteFile(file.c_str());
+
+		std::string indiceOrtho = m_params.output_path + plyinput.c_str() + "_IndiceOrtho_" + std::to_string(colonne) + "x" + std::to_string(ligne) + ".tif";
+		ImageIndiceCorrespondante.WriteFile(indiceOrtho.c_str());
 	}
 
-	XPlanProcess detection;
-	std::vector<float> parametrePlan = detection.determinationEquationPlan(points);
-	
-	std::vector<std::vector<float>> pointsProjetesSurPlanEnCoordonneesTerrain;
-	std::vector<std::vector<float>> pointsProjetesSurPlanEnCoordonneesOrtho;
-	std::vector<float> carteProfondeur;
-	std::vector<float> normal;
-	normal.push_back(parametrePlan[0]);
-	normal.push_back(parametrePlan[1]);
-	normal.push_back(parametrePlan[2]);
 
-	for (uint32 i = 0; i < points.size(); i++)
+	// Récuperation des points de couleur dans le cas d'une sphère
+	if (cas.compare("sphère") == 0)
 	{
-		pointsProjetesSurPlanEnCoordonneesTerrain.push_back(detection.projectionAuPlan(parametrePlan, points[i]));
-		carteProfondeur.push_back(detection.profondeurAuPlan(normal, pointsProjetesSurPlanEnCoordonneesTerrain[i], points[i]));
+		std::cout << "Cas : sphere" << std::endl;
+		std::string couleur("vert");
+		std::vector<std::vector<float>> points_color;
+
+		for (uint32 i = 0; i < (*iter).second.size(); i++)
+		{
+			XPlyPoint* pt = (*iter).second[i]; // Point i 
+			float rouge = (float)pt->R();
+			float vert = (float)pt->G();
+			float bleu = (float)pt->B();
+
+			XPt3D p = pt->Position();
+
+			if (couleur.compare("vert") == 0){
+				if ((vert / rouge) > 1.2 && (vert / bleu) > 1.2)
+				{
+					// Acceder au x, y, z
+					std::vector<float> coordonnees_color;
+					float x = p.X;
+					float y = p.Y;
+					float z = p.Z;
+					coordonnees_color.push_back(x);
+					coordonnees_color.push_back(y);
+					coordonnees_color.push_back(z);
+					points_color.push_back(coordonnees_color);
+				}
+			}
+			if (couleur.compare("rouge") == 0){
+				if ((rouge / vert) > 1.2 && (rouge / bleu) > 1.2)
+				{
+					// Acceder au x, y, z
+					std::vector<float> coordonnees_color;
+					float x = p.X;
+					float y = p.Y;
+					float z = p.Z;
+					coordonnees_color.push_back(x);
+					coordonnees_color.push_back(y);
+					coordonnees_color.push_back(z);
+					points_color.push_back(coordonnees_color);
+				}
+			}
+			if (couleur.compare("bleu") == 0){
+				if ((bleu / rouge) > 1.2 && (bleu / vert) > 1.2)
+				{
+					// Acceder au x, y, z
+					std::vector<float> coordonnees_color;
+					float x = p.X;
+					float y = p.Y;
+					float z = p.Z;
+					coordonnees_color.push_back(x);
+					coordonnees_color.push_back(y);
+					coordonnees_color.push_back(z);
+					points_color.push_back(coordonnees_color);
+				}
+			}
+		}
+		// Fichir ply A FAIRE
+
+		// Test sur le nombre de pixels colorés
+		if (points_color.size() > 120)
+		{
+			// Moyenne des points de couleurs
+			int n = 0;
+			float x = 0;
+			float y = 0;
+			float z = 0;
+			float x_, y_, z_;
+			for (uint32 i = 0; i < points_color.size(); i++)
+			{
+				n += 1;
+				x += points_color[i][0];
+				y += points_color[i][1];
+				z += points_color[i][2];
+			}
+			x_ = x / n;
+			y_ = y / n;
+			z_ = z / n;
+
+
+			// Cordonnées de la station
+			XPt3D* station = (*iter).first;
+			float x_sta = (float)station->X;
+			float y_sta = (float)station->Y;
+			float z_sta = (float)station->Z;
+
+			// Vecteur directeur entre la station laser et le point 
+			std::vector<float> vecteur_directeur;
+			float x_vec = x_ - x_sta;
+			float y_vec = y_ - y_sta;
+			float z_vec = z_ - z_sta;
+			float norme_st = sqrt(x_vec*x_vec + y_vec*y_vec + z_vec*z_vec);
+			vecteur_directeur.push_back(x_vec / norme_st);
+			vecteur_directeur.push_back(y_vec / norme_st);
+			vecteur_directeur.push_back(z_vec / norme_st);
+
+			float rayon = 2.5;
+			float x_appr = x_ + rayon*vecteur_directeur[0];
+			float y_appr = y_ + rayon*vecteur_directeur[1];
+			float z_appr = z_ + rayon*vecteur_directeur[2];
+		}
+
 	}
-	detection.constructionBase();
-	detection.matricePassageReferentielLaserVersReferentielOrthoimage();
-	detection.matricePassageReferentielOrthoimageVersReferentielLaser();
-
-	pointsProjetesSurPlanEnCoordonneesOrtho = detection.changementEnBaseOrtho(pointsProjetesSurPlanEnCoordonneesTerrain);
-
-	std::vector<float> bornes = detection.bornesDeLOrtho(pointsProjetesSurPlanEnCoordonneesOrtho);
-
-	/*
-	Eigen::MatrixXd m(2, 2);
-	m(0, 0) = 3;
-	m(1, 0) = 2.5;
-	m(0, 1) = -1;
-	m(1, 1) = m(1, 0) + m(0, 1);
-	std::cout << m << std::endl;
-	*/
+	
 	/*
 	for( std::map<XLaserPoint*, std::vector<XPlyPoint*>>::iterator iter = vec3Ply.begin(); iter != vec3Ply.end(); iter++ ) 
 	{
@@ -259,6 +444,6 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 	}
 	*/
 
-	return true;	
+return true;	
 }
 

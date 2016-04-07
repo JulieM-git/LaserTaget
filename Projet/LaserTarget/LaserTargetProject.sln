@@ -1,9 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cor3Ply", "Cor3Ply.vcxproj", "{6CBD3F59-98AD-483F-937A-5285CD762DFB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LaserTarget", "Cor3Ply.vcxproj", "{6CBD3F59-98AD-483F-937A-5285CD762DFB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{734B49A7-784E-418B-8E38-917369D59350} = {734B49A7-784E-418B-8E38-917369D59350}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibXTools", "..\libXTools\LibXTools.vcxproj", "{734B49A7-784E-418B-8E38-917369D59350}"
 EndProject

@@ -1,5 +1,8 @@
 #include "XPlanProcess.h"
-
+#include "XRawImage.h"
+#include "XPath.h"
+#include "XStringTools.h"
+#include "XImage.h"
 
 XPlanProcess::XPlanProcess()
 {
@@ -263,11 +266,11 @@ std::vector<float> XPlanProcess::bornesDeLOrtho(std::vector<std::vector<float>> 
 		}
 		if (pointsProjetesSurPlanEnCoordonneesOrtho[i][0] >= Xmax)
 		{
-			Ymin = pointsProjetesSurPlanEnCoordonneesOrtho[i][0];
+			Xmax = pointsProjetesSurPlanEnCoordonneesOrtho[i][0];
 		}
 		if (pointsProjetesSurPlanEnCoordonneesOrtho[i][1] >= Ymax)
 		{
-			Ymin = pointsProjetesSurPlanEnCoordonneesOrtho[i][1];
+			Ymax = pointsProjetesSurPlanEnCoordonneesOrtho[i][1];
 		}
 	}
 
@@ -278,3 +281,34 @@ std::vector<float> XPlanProcess::bornesDeLOrtho(std::vector<std::vector<float>> 
 	
 	return XMinYMinXMaxYMax;
 }
+
+std::vector<std::vector<float>> XPlanProcess::changementOrigine(std::vector<std::vector<float>> pointsProjetesSurPlanEnCoordonneesOrtho, std::vector<float> bornes){
+	std::vector<std::vector<float>> pointsProjetesSurPlanEnCoordonneesOrthoAOrigine;
+	std::vector<float> point;
+	for (uint32 i = 0; i < pointsProjetesSurPlanEnCoordonneesOrtho.size(); i++){
+		std::vector<float> C;
+		point = pointsProjetesSurPlanEnCoordonneesOrtho[i];
+		C.push_back(point[0] - bornes[0]);
+		C.push_back(point[1] - bornes[1]);
+		pointsProjetesSurPlanEnCoordonneesOrthoAOrigine.push_back(C);
+	}
+	return pointsProjetesSurPlanEnCoordonneesOrthoAOrigine;
+}
+
+int XPlanProcess::cherchePixelCompatible(std::vector<std::vector<float>> & pointsProjetesSurPlanEnCoordonneesOrthoTranslate, int colonneEnCours, int ligneEnCours, float taillePixelColonne, float taillePixelLigne)
+{
+	int indice = -1;
+	for (uint32 i = 0; i < pointsProjetesSurPlanEnCoordonneesOrthoTranslate.size(); i++){
+		std::vector<float> point = pointsProjetesSurPlanEnCoordonneesOrthoTranslate[i];
+		float x = point[0];
+		float y = point[1];
+		if (x >= (taillePixelColonne * colonneEnCours) && x <= (taillePixelColonne * (colonneEnCours + 1)) && y >= (taillePixelLigne * ligneEnCours) && y <= (taillePixelLigne * (ligneEnCours + 1)))
+		{
+			indice = i;
+			break;
+		}
+	}
+
+	return indice;
+}
+
