@@ -170,6 +170,8 @@ void XLaserTargetProcess::ClearLaserTarget()
 	}
 }
 //-----------------------------------------------------------------------------
+
+
 bool XLaserTargetProcess::ProcessFile(std::string filename)
 {
 	XPlyNuage plyIn(filename,m_error);
@@ -187,7 +189,7 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 
 	std::map<XLaserPoint*, std::vector<XPlyPoint*>>::iterator iter = vec3Ply.begin();
 
-	std::string cas("sphère");
+	std::string cas("cible");
 
 	if (cas.compare("cible") == 0)
 	{
@@ -240,11 +242,26 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 
 		// Generation de l'orthoimage
 		// Configuration de l'orthoimage
-		int colonne = 25;
-		int ligne = 25;
+		/*int colonne = 100;
+		int ligne = 100;
 		// Equivalence de la taille d'un pixel en coordonnees terrain
 		float taillePixelLigne = (bornes[3] - bornes[1]) / ligne;
 		float taillePixelColonne = (bornes[2] - bornes[0]) / colonne;
+		*/
+		float taillePixelLigne = 0.1;
+		float taillePixelColonne = 0.1;
+
+		int ligne = (bornes[3] - bornes[1]) / taillePixelLigne;
+		int colonne = (bornes[2] - bornes[0]) / taillePixelColonne;
+
+
+
+
+
+
+
+
+
 
 		// Recuperation des valeurs extremales de l'intensite du nuage de point
 		// Initialisation de ces valeurs
@@ -283,6 +300,7 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 
 		// Coloriage
 		int i = ligne * colonne;
+		
 		for (int ligneEnCours = 0; ligneEnCours < ligne; ligneEnCours++)
 		{
 			for (int colonneEnCours = 0; colonneEnCours < colonne; colonneEnCours++)
@@ -307,12 +325,20 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 
 		// Ecriture de l'image
 		XPath P;
-
-		std::string file = m_params.output_path + plyinput.c_str() + "_ortho_" + std::to_string(colonne) + "x" + std::to_string(ligne) + ".tif";
+		std::string taillePixelColonneString = std::to_string(taillePixelColonne);
+		std::string taillePixelLigneString = std::to_string(taillePixelLigne);
+		std::replace(taillePixelColonneString.begin(), taillePixelColonneString.end(), '.', '_');
+		std::replace(taillePixelLigneString.begin(), taillePixelLigneString.end(), '.', '_');
+		std::string file = m_params.output_path + plyinput.c_str() + "_ortho_" + taillePixelColonneString + "x" + taillePixelLigneString + ".tif";
 		MonoImage.WriteFile(file.c_str());
-
-		std::string indiceOrtho = m_params.output_path + plyinput.c_str() + "_IndiceOrtho_" + std::to_string(colonne) + "x" + std::to_string(ligne) + ".tif";
+		
+		//std::string file = m_params.output_path + plyinput.c_str() + "_ortho_" + std::to_string(colonne) + "x" + std::to_string(ligne) + ".tif";
+		
+		std::string indiceOrtho = m_params.output_path + plyinput.c_str() + "_IndiceOrtho_" + taillePixelColonneString + "x" + taillePixelLigneString + ".tif";
 		ImageIndiceCorrespondante.WriteFile(indiceOrtho.c_str());
+
+		std::string reference = m_params.output_path + "referenceCiblette_ortho_0_100000x0_100000.tif";
+		detection.detectionCentreCible(file, reference);
 	}
 
 

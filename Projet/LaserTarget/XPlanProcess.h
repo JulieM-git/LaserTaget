@@ -7,7 +7,13 @@
 #include "XFileLaser.h"
 #include <map>
 #include <Eigen/Dense>
+#include "opencv2\highgui\highgui.hpp"
+#include "opencv2\imgproc\imgproc.hpp"
+#include <iostream>
+#include <stdio.h>
 
+
+using namespace cv;
 class XPlanProcess
 {
 public:
@@ -23,6 +29,8 @@ public:
 	Eigen::Matrix3f P;
 	Eigen::Matrix3f Pinverse;
 	Eigen::Vector3f A;
+
+	static cv::Point2d matchloctrouve;
 
 	std::vector<float> bornes;
 
@@ -42,8 +50,22 @@ public:
 
 
 	int XPlanProcess::cherchePixelCompatible(std::vector<std::vector<float>> &, int, int, float, float);
+
+	static int XPlanProcess::detectionCentreCible(std::string, std::string);
+	cv::Mat XPlanProcess::openImage(std::string);
+	cv::Mat XPlanProcess::convertToInt(cv::Mat);
 	
-	
+	/// Global Variables
+	static Mat img;
+	static Mat templ;
+	static Mat result;
+	static char* image_window;
+	static char* result_window;
+	static int max_Trackbar;
+	static int match_method;
+
+	/// Function Headers
+	static void MatchingMethod(int, void*);
 
 };
 
