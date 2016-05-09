@@ -96,6 +96,7 @@
   <ItemGroup>
     <ClCompile Include="LaserTarget.cpp" />
     <ClCompile Include="XFileLaser.cpp" />
+    <ClCompile Include="XFileXml.cpp" />
     <ClCompile Include="XLaserTargetProcess.cpp" />
     <ClCompile Include="XPlanProcess.cpp" />
     <ClCompile Include="XPlyNuage.cpp" />
@@ -105,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="XFileLaser.h" />
+    <ClInclude Include="XFileXml.h" />
     <ClInclude Include="XLaserTargetProcess.h" />
     <ClInclude Include="XPlanProcess.h" />
     <ClInclude Include="XPlyNuage.h" />

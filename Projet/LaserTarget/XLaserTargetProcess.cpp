@@ -222,11 +222,14 @@ XLaserTargetModel XLaserTargetProcess::m_datas;
 std::map<XLaserPoint*, std::vector<XPlyPoint*>> XLaserTargetProcess::vec3Ply;
 std::vector<int> XLaserTargetProcess::liste_txt_id;
 std::vector<std::string> XLaserTargetProcess::liste_txt_nom;
+std::string XLaserTargetProcess::cas;
+std::string XLaserTargetProcess::couleur;
 //-----------------------------------------------------------------------------
 bool XLaserTargetProcess::Process()
 {
 	InitLaserTarget();
 	char message[1024];
+	LoadCibleUSphere(Params()->txt_inputfile);
 	for(uint32 i=0; i< m_listFileToProcess.size(); i++)
 	{
 		sprintf(message,"\nTraitement %d/%d : ",i+1,m_listFileToProcess.size());
@@ -238,8 +241,6 @@ bool XLaserTargetProcess::Process()
 //-----------------------------------------------------------------------------
 bool XLaserTargetProcess::ProcessPlyLaser3ply(XPlyPoint* pt)
 {
-	std::string cas("sphere");
-	std::string couleur("vert");
 	
 	XPt3D p1 =pt->Position();
 	for( std::map<XLaserPoint*, std::vector<XPlyPoint*>>::iterator iter = vec3Ply.begin(); iter != vec3Ply.end(); iter++ ) 
@@ -362,7 +363,7 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 		fichier.push_back(str);
 	}
 	// Nom de la cible/sphère : fichier[0]
-	std::string cas;
+	//std::string cas;
 	int cas_id;
 	//Trouver dans quel cas on est
 	for (int i = 0; i < liste_txt_nom.size(); i++){
@@ -376,6 +377,7 @@ bool XLaserTargetProcess::ProcessFile(std::string filename)
 		int id = mod->id;
 		if (id == cas_id){
 			cas = mod->type;
+			couleur = mod->couleur;
 		}
 	}
 

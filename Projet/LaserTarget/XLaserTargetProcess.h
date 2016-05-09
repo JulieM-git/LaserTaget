@@ -99,6 +99,8 @@ public:
 	~XLaserTargetProcess(void);
 
 
+	static std::string cas;
+	static std::string couleur;
 
 	bool LoadXmlFile(std::string filename);
 	XLaserTargetParams* Params(){return &m_params;}	
