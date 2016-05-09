@@ -16,12 +16,13 @@ public:
 	double StartTime;
 	double EndTime;
 	std::ofstream* out;
+	XPt3D m_Station; //Coordonnées de la station (levés fixes terrestres)
 
 protected:
 	XError* m_error;
 	std::string m_strFilename;
 	std::ifstream in;
-	XPt3D m_Station; //Coordonnées de la station (levés fixes terrestres)
+	//XPt3D m_Station; //Coordonnées de la station (levés fixes terrestres)
 
 	XPt3D m_offset; //pour les coordonnées tronquées
 

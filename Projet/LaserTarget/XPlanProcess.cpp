@@ -400,3 +400,38 @@ void XPlanProcess::MatchingMethod(int, void*)
 	matchloctrouve = cv::Point2d(matchLoc.x + templ.cols / 2, matchLoc.y + templ.rows / 2);
 	return;
 }
+
+
+int XPlanProcess::chercheValeurPixel(const char * filename, int num_ligne, int num_col)
+{
+	float val = 0;
+	int X = 0;
+	int Y = 0;
+	Mat image;
+	image = imread(filename, IMREAD_GRAYSCALE);
+	Scalar intensity;
+	intensity = image.at<uchar>(num_ligne, num_col);
+	std::cout << " TEST " << std::endl;
+	std::cout << intensity << std::endl;
+	
+
+	//val = pointsProjetesSurPlanEnCoordonneesOrthoTranslate[num_ligne, num_col];
+	if (val != -1)
+	{
+		return val;
+	}
+	else
+	{
+		for (X = 0; X < 5; X++)
+		{
+			for (Y = 0; Y < 5; Y++)
+			{
+				while (val != -1)
+				{
+					val = 0;// pointsProjetesSurPlanEnCoordonneesOrthoTranslate[num_ligne + X, num_col + Y];
+				}
+			}
+		}
+		return val;
+	}
+}

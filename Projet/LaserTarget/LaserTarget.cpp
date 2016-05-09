@@ -71,7 +71,27 @@ int main(int argc, char **argv)
 
 	if( !m_process->InitProcess())
         return XErrorError(m_error,__FUNCTION__," Erreur au chargement du capteur");
+    
+	std::string data = m_strAppPath + "LaserTarget_Model1.xml";
+	if (argc > 1)
+		data = m_strAppPath + argv[1];
+	XErrorInfo(m_error, __FUNCTION__, "Chargement du fichier de model ", data.c_str());
+	//XSystemInfo system;
+	if (!system.FindFile(data.c_str()))
+	{
+		XErrorError(m_error, __FUNCTION__, "Erreur: Fichier model introuvable");
+		std::cout << "Taper sur une touche pour quitter le programme";
+		int ch = _getch();
+		return 0;
+	}
+
+	if (!m_process->LoadXmlData(data))
+		return -1;
+
+	//if (!m_process->InitProcess())
+		//return XErrorError(m_error, __FUNCTION__, " Erreur au chargement du capteur");
       
+	  
 	XImageTiffWriter*  TIFFWriter = new XImageTiffWriter(m_error);
 	XRawImage::RegisterWriter(TIFFWriter, "tif");
 

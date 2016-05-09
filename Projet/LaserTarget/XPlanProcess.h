@@ -51,6 +51,9 @@ public:
 
 	int XPlanProcess::cherchePixelCompatible(std::vector<std::vector<float>> &, int, int, float, float);
 
+
+	int XPlanProcess::chercheValeurPixel(const char * filename, int num_ligne, int num_col);
+
 	static int XPlanProcess::detectionCentreCible(std::string, std::string);
 	cv::Mat XPlanProcess::openImage(std::string);
 	cv::Mat XPlanProcess::convertToInt(cv::Mat);
