@@ -6,6 +6,7 @@
 #include "XRawImage.h"
 
 #include <conio.h>
+#include <time.h>
 
 using namespace std;
 
@@ -43,6 +44,7 @@ bool InitInternalData()
 //-----------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
+
 	std::cout<<"Initialisation interne " <<std::endl;
 	if(!InitInternalData())
 		return -1;

@@ -9,6 +9,7 @@
 #include <map>
 #include <vector>
 #include <list>
+#include <sys/stat.h>
 
 //-----------------------------------------------------------------------------
 class XLaserTargetParams
@@ -49,14 +50,6 @@ class XLaserTargetModel
 public:
 	std::list<model> model_list;
 	std::string data_path;
-	/*std::vector<std::string> type;
-	std::vector<std::string> id;
-	std::vector<std::string> nom;
-	std::vector<std::string> rayon;
-	std::vector<std::string> couleur;
-	std::vector<std::string> image2D;
-	std::vector<std::string> nuage;
-	std::vector<std::string> resolution;*/
 
 public:
 	XLaserTargetModel(void);
@@ -98,9 +91,12 @@ public:
 	XLaserTargetProcess(XError* error);
 	~XLaserTargetProcess(void);
 
-
+	inline bool  exists_test(const std::string& name);
 	static std::string cas;
 	static std::string couleur;
+	static std::string image2D;
+	static float resolution;
+	static float rayon;
 
 	bool LoadXmlFile(std::string filename);
 	XLaserTargetParams* Params(){return &m_params;}	

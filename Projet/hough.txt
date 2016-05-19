@@ -1,0 +1,31 @@
+void function hough(listePoint)
+{
+	double r_min = 1;
+	double r_max = 2;
+	double PI = 3.1416;
+	double cx;
+	double cy;
+	double cz;
+	std::vector<std::vector<std::vector<std::vector<std::vector<double>>>>> accumulator;
+
+	for (int i = 0; i<listePoint.size(); i++ )
+	{
+		for (double r = r_min; r <= r_max; r++)
+		{
+			for (double theta = 0; theta <= 2*PI; theta++)
+			{
+				for (double phi = 0 ; phi <= PI; phi++)
+				{
+					cx = listePoint[i].x - r*cos(theta)*sin(phi);
+					cy = listePoint[i].y - r*sin(theta)*sin(phi);
+					cz = listePoint[i].z - r*cos(phi);
+					accumulator[r][cx][cy][cz]++;
+
+				}
+			}
+		}
+	}
+
+	std::vector<std::vector<std::vector<std::vector<std::vector<double>>>>> accumulator_maximum = max(accumulator);
+	return accumulator_maximum;
+}

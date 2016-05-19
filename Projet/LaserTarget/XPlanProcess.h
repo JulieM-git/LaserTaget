@@ -66,6 +66,7 @@ public:
 	static char* result_window;
 	static int max_Trackbar;
 	static int match_method;
+	static bool display;
 
 	/// Function Headers
 	static void MatchingMethod(int, void*);

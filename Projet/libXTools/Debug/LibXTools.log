@@ -1,48 +1,7 @@
-﻿Build started 06/04/2016 14:39:47.
-     1>Project "C:\Users\Loic\Documents\GitHub\LaserTarget\Projet\libXTools\LibXTools.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 18/05/2016 12:04:36.
+     1>Project "C:\Users\Loic\Documents\GitHub\LaserTarget\Projet\libXTools\LibXTools.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"../libTiff-3.8.2/libtiff" /I../tinyxml /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D TIXML_USE_STL /D _USE_MATH_DEFINES /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ConsoleError.cpp XArchiGeoref.cpp XArchiGeorefXML.cpp XArchiXMLBaseTools.cpp XArchiXMLTools.cpp XErrorTxt.cpp XErrorXml.cpp XFileTxtReader.cpp XFrame.cpp XImage.cpp XImageLoader.cpp XImageTiffLoader.cpp XMat3D.cpp XPath.cpp XPt2D.cpp XPt3D.cpp XQuaternion.cpp XRawImage.cpp XRect.cpp XSensor.cpp XSensorXML.cpp XStringTools.cpp XSystemInfo.cpp
-         XSystemInfo.cpp
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(184): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(230): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(306): warning C4244: 'initializing' : conversion from 'LONGLONG' to 'double', possible loss of data
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(335): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(555): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(566): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(575): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(577): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(641): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(646): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(786): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(849): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(871): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsysteminfo.cpp(968): warning C4244: 'initializing' : conversion from 'DWORD' to 'uint16', possible loss of data
-         XStringTools.cpp
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xstringtools.cpp(62): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xstringtools.cpp(166): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xstringtools.cpp(386): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
-         XSensorXML.cpp
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsensorxml.cpp(78): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsensorxml.cpp(224): warning C4244: 'argument' : conversion from 'double' to 'uint32', possible loss of data
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsensorxml.cpp(243): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-         XSensor.cpp
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsensor.cpp(325): warning C4150: deletion of pointer to incomplete type 'XDistoImageData'; no destructor called
-                 c:\users\loic\documents\github\lasertarget\projet\libxtools\xsensor.h(14) : see declaration of 'XDistoImageData'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsensor.cpp(932): warning C4244: 'initializing' : conversion from 'std::streamsize' to 'int', possible loss of data
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xsensor.cpp(1001): warning C4244: 'initializing' : conversion from 'std::streamsize' to 'int', possible loss of data
-         XRect.cpp
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"../libTiff-3.8.2/libtiff" /I../tinyxml /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D TIXML_USE_STL /D _USE_MATH_DEFINES /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt XRawImage.cpp
          XRawImage.cpp
      1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xrawimage.cpp(111): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
@@ -53,72 +12,6 @@
      1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xrawimage.cpp(659): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xrawimage.cpp(747): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xrawimage.cpp(769): warning C4018: '<' : signed/unsigned mismatch
-         XQuaternion.cpp
-         XPt3D.cpp
-         XPt2D.cpp
-         XPath.cpp
-         XMat3D.cpp
-         XImageTiffLoader.cpp
-         XImageLoader.cpp
-         XImage.cpp
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\ximage.h(439): warning C4244: 'initializing' : conversion from 'double' to 'uint16', possible loss of data
-                 c:\users\loic\documents\github\lasertarget\projet\libxtools\ximage.h(435) : while compiling class template member function 'float XImage<unsigned char>::GetFloatPixBilin(double,double,uint16)'
-                 c:\users\loic\documents\github\lasertarget\projet\libxtools\ximage.cpp(3) : see reference to class template instantiation 'XImage<unsigned char>' being compiled
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\ximage.h(440): warning C4244: 'initializing' : conversion from 'double' to 'uint16', possible loss of data
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\ximage.h(449): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\ximage.h(450): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\ximage.h(451): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\ximage.h(444): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\ximage.h(445): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\ximage.h(446): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\ximage.h(447): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-         XFrame.cpp
-         XFileTxtReader.cpp
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xfiletxtreader.cpp(47): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
-         XErrorXml.cpp
-         XErrorTxt.cpp
-         XArchiXMLTools.cpp
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmltools.cpp(36): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmltools.cpp(119): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmltools.cpp(120): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmltools.cpp(198): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmltools.cpp(219): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
-         XArchiXMLBaseTools.cpp
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmlbasetools.cpp(147): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmlbasetools.cpp(155): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmlbasetools.cpp(165): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmlbasetools.cpp(173): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmlbasetools.cpp(213): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmlbasetools.cpp(223): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmlbasetools.cpp(232): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmlbasetools.cpp(240): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmlbasetools.cpp(410): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmlbasetools.cpp(422): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchixmlbasetools.cpp(434): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
-         Generating Code...
-         Compiling...
-         XArchiGeorefXML.cpp
-         XArchiGeoref.cpp
-     1>c:\users\loic\documents\github\lasertarget\projet\libxtools\xarchigeoref.cpp(64): warning C4244: 'initializing' : conversion from 'std::streamsize' to 'int', possible loss of data
-         ConsoleError.cpp
-         Generating Code...
        Lib:
          C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Loic\Documents\GitHub\LaserTarget\Projet\LaserTarget\Debug\LibXTools.lib" /NOLOGO Debug\ConsoleError.obj
          Debug\XArchiGeoref.obj
@@ -145,8 +38,8 @@
          Debug\XSystemInfo.obj
      1>XImageLoader.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
          LibXTools.vcxproj -> C:\Users\Loic\Documents\GitHub\LaserTarget\Projet\LaserTarget\Debug\LibXTools.lib
-     1>Done Building Project "C:\Users\Loic\Documents\GitHub\LaserTarget\Projet\libXTools\LibXTools.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "C:\Users\Loic\Documents\GitHub\LaserTarget\Projet\libXTools\LibXTools.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:33.23
+Time Elapsed 00:00:19.79
